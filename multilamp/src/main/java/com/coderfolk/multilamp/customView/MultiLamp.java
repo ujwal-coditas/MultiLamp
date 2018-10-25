@@ -17,11 +17,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import com.coderfolk.multilamp.R;
 import com.coderfolk.multilamp.model.Target;
 
 import java.util.ArrayList;
