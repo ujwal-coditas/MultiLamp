@@ -28,10 +28,7 @@ import java.util.ArrayList;
 
 public class MultiLamp extends RelativeLayout {
 
-    private Paint mBackgroundPaint;
-    private float mCx = -1;
-    private float mCy = -1;
-    private int overlayColor = Color.parseColor("#D20E0F02");
+    private int overlayColor = Color.parseColor("#E6000000");
     private ArrayList<Target> list;
     private Activity activity;
     public static final char LEFT = 'l';
@@ -39,7 +36,7 @@ public class MultiLamp extends RelativeLayout {
     public static final char TOP = 't';
     public static final char BOTTOM = 'b';
     private Context context;
-    private float density;
+    //    private float density;
     private Callback callback;
 
     public interface Callback {
@@ -77,7 +74,7 @@ public class MultiLamp extends RelativeLayout {
     }
 
     private void init() {
-        density = context.getResources().getDisplayMetrics().density;
+//        density = context.getResources().getDisplayMetrics().density;
         list = new ArrayList<>();
         setLayerType(LAYER_TYPE_HARDWARE, null);
     }
