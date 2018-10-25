@@ -1,7 +1,7 @@
 
 # MultiLamp
 
-MultiLamp is simple and easy to use Android library used to showcase/highlight the multiple views on the same overlay with some message. 
+MultiLamp is simple and easy to use Android library to showcase/highlight the multiple views on the same overlay with some message. 
 
 <img src="https://user-images.githubusercontent.com/12962409/47506382-8baa9200-d88d-11e8-8c93-8b671d72a5cf.png" width="400px"/>
 
