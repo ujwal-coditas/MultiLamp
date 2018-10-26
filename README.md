@@ -20,16 +20,16 @@ MultiLamp is simple and easy to use Android library to showcase/highlight the mu
 **Step 2 :** Add the dependency
 
 	dependencies {
-	        implementation 'com.github.ujwalthote:MultiLamp:1.0'
+	        implementation 'com.github.ujwalthote:MultiLamp:2.0'
 	}
 
 ## Usage
 
-    MultiLamp multiLamp = new MultiLamp(context, activity);  
-    ArrayList<Target> targets = new ArrayList<>();  
-    targets.add(new Target(view1, "This is view 1", MultiLamp.RIGHT, new Circle(40, context)));  
-    targets.add(new Target(button, "Message 2", MultiLamp.LEFT, new Circle(40, context)));  
-    targets.add(new Target(textView, "This is textview", MultiLamp.TOP, new Rectangle(context)));  
+    MultiLamp multiLamp = new MultiLamp(activity);
+    ArrayList<Target> targets = new ArrayList<>();
+    targets.add(new Target(btn1, "This is button 1", MultiLamp.RIGHT, new Circle(40)));
+    targets.add(new Target(btn2, "This is button 2", MultiLamp.LEFT, new Circle(40)));
+    targets.add(new Target(textView, "This is textview", MultiLamp.TOP, new Rectangle()));
     multiLamp.build(targets);
 
 For demo example, clone this repo and checkout the app module 
