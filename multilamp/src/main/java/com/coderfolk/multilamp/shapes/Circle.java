@@ -15,18 +15,16 @@ public class Circle implements Shape {
 
 
     private float radius;
-    private Context context;
 
-    public Circle(float radius, Context context) {
+    public Circle(float radius) {
 
         this.radius = radius;
-        this.context = context;
 
     }
 
 
     @Override
-    public void draw(Canvas canvas, PointF point, float value, Target target, Paint paint) {
+    public void draw(Canvas canvas, Context context, PointF point, float value, Target target, Paint paint) {
         float density = context.getResources().getDisplayMetrics().density;
         int[] location = new int[2];
         target.getView().getLocationOnScreen(location);

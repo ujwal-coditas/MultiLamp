@@ -12,14 +12,10 @@ import com.coderfolk.multilamp.customView.MultiLamp;
 import com.coderfolk.multilamp.model.Target;
 
 public class Rectangle implements Shape {
-    private Context context;
 
-    public Rectangle(Context context) {
-        this.context = context;
-    }
 
     @Override
-    public void draw(Canvas canvas, PointF point, float value, Target target, Paint paint) {
+    public void draw(Canvas canvas, Context context, PointF point, float value, Target target, Paint paint) {
         float density = context.getResources().getDisplayMetrics().density;
         int[] location = new int[2];
         target.getView().getLocationInWindow(location);

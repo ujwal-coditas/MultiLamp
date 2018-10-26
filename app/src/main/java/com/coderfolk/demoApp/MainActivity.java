@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         Button btn1 = findViewById(R.id.btn1);
         Button btn2 = findViewById(R.id.btn2);
         TextView textView = findViewById(R.id.textView);
-        MultiLamp multiLamp = new MultiLamp(getApplicationContext(), this);
+        MultiLamp multiLamp = new MultiLamp(this);
         ArrayList<Target> targets = new ArrayList<>();
-        targets.add(new Target(btn1, "This is button 1", MultiLamp.RIGHT, new Circle(40, getApplicationContext())));
-        targets.add(new Target(btn2, "This is button 2", MultiLamp.LEFT, new Circle(40, getApplicationContext())));
-        targets.add(new Target(textView, "This is textview", MultiLamp.TOP, new Rectangle(getApplicationContext())));
+        targets.add(new Target(btn1, "This is button 1", MultiLamp.RIGHT, new Circle(40)));
+        targets.add(new Target(btn2, "This is button 2", MultiLamp.LEFT, new Circle(40)));
+        targets.add(new Target(textView, "This is textview", MultiLamp.TOP, new Rectangle()));
         multiLamp.build(targets);
     }
 }

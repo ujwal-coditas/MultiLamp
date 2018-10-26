@@ -40,33 +40,33 @@ public class MultiLamp extends RelativeLayout {
         void onTutorialFinished();
     }
 
-    public MultiLamp(Context context, Activity activity) {
-        super(context);
+    public MultiLamp(Activity activity) {
+        super(activity.getApplicationContext());
         this.activity = activity;
-        this.context = context;
+        this.context = activity.getApplicationContext();
 
         init();
     }
 
-    public MultiLamp(Context context, Activity activity, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+    public MultiLamp(Activity activity, @Nullable AttributeSet attrs) {
+        super(activity.getApplicationContext(), attrs);
         this.activity = activity;
-        this.context = context;
+        this.context = activity.getApplicationContext();
         init();
     }
 
-    public MultiLamp(Context context, Activity activity, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public MultiLamp(Activity activity, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(activity.getApplicationContext(), attrs, defStyleAttr);
         this.activity = activity;
-        this.context = context;
+        this.context = activity.getApplicationContext();
         init();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public MultiLamp(Context context, Activity activity, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+    public MultiLamp(Activity activity, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(activity.getApplicationContext(), attrs, defStyleAttr, defStyleRes);
         this.activity = activity;
-        this.context = context;
+        this.context = activity.getApplicationContext();
         init();
     }
 
@@ -135,7 +135,7 @@ public class MultiLamp extends RelativeLayout {
                 view.getLocationInWindow(location);
                 float x = view.getX() + view.getWidth() / 2f;
                 float y = view.getY() + view.getHeight() / 2f;
-                target.getShape().draw(canvas, new PointF(view.getX(), view.getY()), 0, target, paint);
+                target.getShape().draw(canvas, context, new PointF(view.getX(), view.getY()), 0, target, paint);
             }
         }
 
